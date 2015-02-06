@@ -310,6 +310,7 @@ ret:
     if (urandom_fd != -1) {
         close(urandom_fd);
     }
+    explicit_memset(buf, 0, sizeof(buf));
     return result;
 }
 
