@@ -122,6 +122,10 @@
 #define AID_OEM_RESERVED_2_START 5000
 #define AID_OEM_RESERVED_2_END   5999
 
+#define AID_PAX_NO_PAGEEXEC 3010  /* disable PaX's PAGEEXEC feature */
+#define AID_PAX_NO_MPROTECT 3011  /* disable PaX's MPROTECT feature */
+#define AID_PAX_NO_RANDMMAP 3012  /* disable PaX's RANDMMAP feature */
+
 #define AID_EVERYBODY     9997  /* shared between all apps in the same profile */
 #define AID_MISC          9998  /* access to misc storage */
 #define AID_NOBODY        9999
@@ -222,6 +226,10 @@ static const struct android_id_info android_ids[] = {
     { "net_bt_stack",  AID_NET_BT_STACK, },
     { "readproc",      AID_READPROC, },
     { "wakelock",      AID_WAKELOCK, },
+
+    { "pax_no_pageexec", AID_PAX_NO_PAGEEXEC },
+    { "pax_no_mprotect", AID_PAX_NO_MPROTECT },
+    { "pax_no_randmmap", AID_PAX_NO_RANDMMAP },
 
     { "everybody",     AID_EVERYBODY, },
     { "misc",          AID_MISC, },
