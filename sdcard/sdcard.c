@@ -282,11 +282,8 @@ static void release_node_locked(struct node* node)
             TRACE("DESTROY %p (%s)\n", node, node->name);
             remove_node_from_parent_locked(node);
 
-                /* TODO: remove debugging - poison memory */
-            memset(node->name, 0xef, node->namelen);
             free(node->name);
             free(node->actual_name);
-            memset(node, 0xfc, sizeof(*node));
             free(node);
         }
     } else {
